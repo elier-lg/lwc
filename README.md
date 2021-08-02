@@ -1,18 +1,14 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Challenge
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Guidelines:
 
-## How Do You Plan to Deploy Your Changes?
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+- 1. Setup a new free salesforce org
 
-## Configure Your Salesforce DX Project
+- 2. Write an hourly job that syncs new content from r/aww (or any other favorite sub) into a custom object, maintain the newest posts at any given time by dropping older posts. 
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Note: (just in case you didn't know Reddit's "feed" API is super easy to access by appending ".json" to any page; see: https://www.reddit.com/r/aww.json)
 
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+- 3. Make this content visible by creating a LWC, in such control limit the number of records to 40.
+ 
+- 4. r/aww is very image based, display those images on the record when viewed.
