@@ -1,0 +1,27 @@
+<template>
+  <lightning-card title="Aww post list" icon-name="custom:custom14">
+
+    
+    <div style="height:300px;">
+      <lightning-datatable actions={actions} key-field="id" data={awwPosts.data} columns={columns} onrowaction={handleRowAction}>
+      </lightning-datatable>
+    </div>
+    
+    <div class="slds-m-around--medium" style="height: 300px;">
+      <article class="slds-tile">
+        <h3 class="slds-tile__title slds-truncate" title="Record details"> Post details </h3>
+        <div class="slds-tile__detail">
+          <dl class="slds-list_horizontal slds-wrap">
+            <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Name">Title:</dt>
+            <dd class="slds-item_detail slds-truncate">{record.title__c}</dd>
+            <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Balance">Thumbnail:</dt>
+            <dd class="slds-item_detail slds-truncate">
+              <img src={record.title__c}  alt='image' style="width:80px;height:80px;"/>
+            </dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+
+  </lightning-card>
+</template>
