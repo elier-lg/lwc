@@ -1,6 +1,0 @@
-//name is bound to title
-select Id, Name from AwwPost__c
-
-SELECT COUNT()
-FROM AwwPost__c
-WHERE Name LIKE 'a%'
