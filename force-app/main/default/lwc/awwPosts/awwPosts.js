@@ -16,7 +16,7 @@ const columns = [
   },
   { label: 'Author', fieldName: 'author_fullname__c', type: 'text' },
   { label: 'Title', fieldName: 'title__c', type: 'text' },
-  { label: 'Thumbnail', fieldName: 'thumbnail__c', type: 'url' },
+  // { label: 'Thumbnail', fieldName: 'thumbnail__c', type: 'url' },
 ];
 
 
