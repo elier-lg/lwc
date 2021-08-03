@@ -3,14 +3,22 @@
 
     
     <div style="height:400px;">
-      <lightning-datatable actions={actions} 
+      <!-- <lightning-datatable actions={actions} 
         key-field="id" 
         data={awwPosts.data} 
         columns={columns} 
         hide-checkbox-column="true"
         onrowaction={handleRowActions}
         >
-      </lightning-datatable>
+      </lightning-datatable> -->
+      <c-custom-table actions={actions} 
+        key-field="id" 
+        data={awwPosts.data} 
+        columns={columns} 
+        hide-checkbox-column="true"
+        onrowaction={handleRowActions}
+        >
+      </c-custom-table>      
     </div>
     
     <div class="slds-m-around--medium" style="height: 500px;">
