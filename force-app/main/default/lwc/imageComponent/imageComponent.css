@@ -1,0 +1,8 @@
+.imageControl{
+  padding:5px; 
+}
+
+.imageControl > img{
+  height: 50px;
+  width: 50px;
+}

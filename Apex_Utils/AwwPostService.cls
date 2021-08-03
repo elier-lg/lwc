@@ -41,7 +41,9 @@ public class AwwPostService{
 
   public void Insert_Dummy_Aww(){
     AwwPost__c postObj = new AwwPost__c();
-    String st = 'title - ' + DateTime.now();  //.format('MM/dd/yyyy HH:mm:ss')
+  
+    //.format('MM/dd/yyyy HH:mm:ss')
+    String st = DateTime.now(); 
     postObj.title__c = 'title - ' + st;
     postObj.author_fullname__c = 'author - ' + st;
     postObj.thumbnail__c = 'thumb - ' + st;
@@ -49,8 +51,12 @@ public class AwwPostService{
     insert postObj;
   }
 
+  // limit of delete at 150s
+  // we only request a limit of 100 from reddit in each execution of scheduled job,
+  // but reddit retrieves some times a few more than that ie: 102
+  // so lets leave it in 150
   public void Delete_All(){
-    List<AwwPost__c> awws =[select Name from AwwPost__C limit 9999];
+    List<AwwPost__c> awws =[select Name from AwwPost__C limit 150];
     Delete awws;
   }
 }

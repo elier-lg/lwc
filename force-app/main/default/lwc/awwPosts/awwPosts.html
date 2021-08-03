@@ -2,15 +2,7 @@
   <lightning-card title="Aww post list" icon-name="custom:custom14">
 
     
-    <div style="height:400px;">
-      <!-- <lightning-datatable actions={actions} 
-        key-field="id" 
-        data={awwPosts.data} 
-        columns={columns} 
-        hide-checkbox-column="true"
-        onrowaction={handleRowActions}
-        >
-      </lightning-datatable> -->
+    <div class="tableContainer">
       <c-custom-table actions={actions} 
         key-field="id" 
         data={awwPosts.data} 
@@ -21,9 +13,8 @@
       </c-custom-table>      
     </div>
     
-    <div class="slds-m-around--medium" style="height: 500px;">
-      <article class="slds-tile">
-
+    <div>
+      <article class="details">
         <h1>Post Details</h1>
         <br/>
         <p>
@@ -33,7 +24,7 @@
         </p>         
         <p>
         <br/>
-        <img src={record.thumbnail__c}  alt='image' style="width:300px;height:300px;"/>
+        <img src={record.thumbnail__c}  alt='image' class="thumbnail"/>
         </p>
       </article>
     </div>
